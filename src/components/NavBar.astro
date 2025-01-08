@@ -24,11 +24,11 @@
         <input type="checkbox" name="button" id="btn" class="hidden peer">
 
         <!-- Hamburger menu button-->
-        <div class="flex flex-col justify-end gap-2 md:hidden" hamburger-menu>
+        <label for="btn" class="flex flex-col justify-end gap-2 cursor-pointer bg-transparent md:hidden bg-yellow-200" hamburger-menu>
           <span class="menu"></span>
           <span class="menu"></span>
           <span class="menu"></span>
-        </div>
+        </label>
       </div>
 
       <!-- Menu for mobile -->
@@ -130,25 +130,25 @@
   }
 
   .menu {
-    @apply h-0.5 w-7 bg-black block transition duration-150;
+    @apply h-0.5 w-7 bg-black block rounded-md transition duration-150;
   }
 
   header:has(input:checked) [hamburger-menu] > .menu:first-child {
-    translate: 4px 4px;
+    translate: 5px 5px;
     transform: rotate(45deg) translateY(7px);
   }
 
   header:has(input:checked) [hamburger-menu] > .menu:nth-child(2) {
-    display: none;
+    opacity: 0;
+  }
+
+  header:has(input:checked) [hamburger-menu] > .menu:last-child {
+    translate: 5px -5px;
+    transform: rotate(-45deg) translateY(-7px);
   }
 
   #dropdown-menu {
     @apply md:h-10 md:transition-none md:bg-transparent;
-  }
-
-  header:has(input:checked) [hamburger-menu] > .menu:last-child {
-    translate: 4px 4px;
-    transform: rotate(-45deg) translateY(-7px);
   }
 
   [dropdown-menu] {
