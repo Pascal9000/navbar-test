@@ -1,0 +1,162 @@
+---
+
+---
+
+<header class="h-14 relative bg-primary">
+  <!-- Menu button for mobile -->
+  <label for="btn" class="h-7 w-7 right-2 top-[17px] absolute z-50 cursor-pointer bg-transparent md:hidden">
+  </label>
+
+  <!-- Logo + menu button section -->
+  <div id="menu-transformer" class="h-full w-screen pt-3 md:grid md:grid-cols-3" menu-transformer>
+
+    <!-- Expandable bar for mobile, only icon + name for desktop -->
+    <div id="dropdown-menu" class="mx-2 px-2 py-2 rounded-lg h-10 flex flex-col justify-between overflow-hidden bg-primary" dropdown-menu>
+
+      <div class="flex justify-between">
+        <!-- Logo + name -->
+        <div class="flex gap-2">
+          <svg class="inline"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-heartbeat"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" /><path d="M3 13h2l2 3l2 -6l1 3h3" /></svg>
+            VitaHub
+        </div>
+
+        <!-- hidden checkbox to make everything work -->
+        <input type="checkbox" name="button" id="btn" class="hidden peer">
+
+        <!-- Hamburger menu button-->
+        <div class="flex flex-col justify-end gap-2 md:hidden" hamburger-menu>
+          <span class="menu"></span>
+          <span class="menu"></span>
+          <span class="menu"></span>
+        </div>
+      </div>
+
+      <!-- Menu for mobile -->
+      <nav id="nav" class="opacity-0 h-[50%] flex flex-col items-center tracking-wide" mobile-nav>
+        <label class="button shadow-sm rounded-t-xl" for="btn">Blog</label>
+        <label class="button shadow-sm" for="btn">Tags</label>
+        <label class="button shadow-sm" for="btn">Categories</label>
+        <div class="button shadow-sm rounded-b-xl mt-2">
+          <svg class="m-auto"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+        </div>
+      </nav>
+      <!-- Socials -->
+      <div id="social-icons" class="hidden" social-icons>
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+      </div>
+
+    </div>
+    <!-- Menu items for desktop -->
+    <nav class="justify-evenly items-center hidden md:flex">
+      <div>Blog</div>
+      <div>Tags</div>
+      <button class=" focus:bg-blue-200">Categories</button>
+    </nav>
+
+    <div class="hidden md:flex items-center justify-end pr-3 gap-3">
+       <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+       <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+       <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>                                                                           
+    </div>
+
+</header>
+
+<div class="content">
+  <div class="bg-gray-100">
+    Content
+  </div>
+</div>
+<div class="content">
+  <div class="bg-gray-300">
+    Content
+  </div>
+</div>
+<div class="content">
+  <div class="bg-gray-100">
+    Content
+  </div>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  [menu-transformer]:has(input:checked) {
+    height: 100dvh;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  [menu-transformer]:has(input:checked) [mobile-nav] {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition-delay: 250ms;
+  }
+
+  [menu-transformer]:has(input:checked) [social-icons] {
+    display: flex;
+    justify-content: end;
+    gap: 6px;
+    padding: 2px 12px;
+  }
+
+  #menu-transformer {
+    @apply md:h-full transition-none;
+  }
+
+  #nav,
+  #social-icons {
+    @apply md:hidden;
+  }
+
+  #social svg {
+    @apply size-6;
+  }
+
+  .button {
+    width: 100%;
+    max-width: min(80vw, 300px);
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    background-color: whitesmoke;
+  }
+
+  .content {
+    @apply bg-gray-200 grid h-40 items-center justify-center;
+  }
+
+  .menu {
+    @apply h-0.5 w-7 bg-black block transition duration-150;
+  }
+
+  header:has(input:checked) [hamburger-menu] > .menu:first-child {
+    translate: 4px 4px;
+    transform: rotate(45deg) translateY(7px);
+  }
+
+  header:has(input:checked) [hamburger-menu] > .menu:nth-child(2) {
+    display: none;
+  }
+
+  #dropdown-menu {
+    @apply md:h-10 md:transition-none md:bg-transparent;
+  }
+
+  header:has(input:checked) [hamburger-menu] > .menu:last-child {
+    translate: 4px 4px;
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+  [dropdown-menu] {
+    transition: none
+  }
+
+  [dropdown-menu]:has(input:checked) {
+    height: 95dvh;
+    transition: height 250ms ease-in;
+  }
+</style>
