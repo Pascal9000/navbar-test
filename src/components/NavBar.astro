@@ -3,36 +3,27 @@
 ---
 
 <header class="h-14 relative bg-primary">
-  <!-- Menu button for mobile -->
-  <label for="btn" class="h-7 w-7 right-2 top-[17px] absolute z-50 cursor-pointer bg-transparent md:hidden">
-  </label>
-
-  <!-- Logo + menu button section -->
+  <!-- Logo + menu button container -->
   <div id="menu-transformer" class="h-full w-screen pt-3 md:grid md:grid-cols-3" menu-transformer>
-
-    <!-- Expandable bar for mobile, only icon + name for desktop -->
+    <!-- Expandable container for mobile, only icon + name for desktop -->
     <div id="dropdown-menu" class="mx-2 px-2 py-2 rounded-lg h-10 flex flex-col justify-between overflow-hidden bg-primary" dropdown-menu>
-
       <div class="flex justify-between">
         <!-- Logo + name -->
         <div class="flex gap-2">
           <svg class="inline"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-heartbeat"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" /><path d="M3 13h2l2 3l2 -6l1 3h3" /></svg>
             VitaHub
         </div>
-
         <!-- hidden checkbox to make everything work -->
-        <input type="checkbox" name="button" id="btn" class="hidden peer">
-
+        <input type="checkbox" name="button" id="btn" class="peer hidden">
         <!-- Hamburger menu button-->
-        <label for="btn" class="flex flex-col justify-end gap-2 cursor-pointer bg-transparent md:hidden bg-yellow-200" hamburger-menu>
+        <label for="btn" tabindex="1" class="flex flex-col justify-end gap-2 cursor-pointer bg-transparent md:hidden" hamburger-menu>
           <span class="menu"></span>
           <span class="menu"></span>
           <span class="menu"></span>
         </label>
       </div>
-
-      <!-- Menu for mobile -->
-      <nav id="nav" class="opacity-0 h-[50%] flex flex-col items-center tracking-wide" mobile-nav>
+      <!-- Menu items for mobile dropdown menu -->
+      <nav id="nav" class="opacity-0 h-[50%] flex flex-col items-center tracking-wide" mobile-nav aria-label="main navigation">
         <label class="button shadow-sm rounded-t-xl" for="btn">Blog</label>
         <label class="button shadow-sm" for="btn">Tags</label>
         <label class="button shadow-sm" for="btn">Categories</label>
@@ -46,7 +37,6 @@
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
       </div>
-
     </div>
     <!-- Menu items for desktop -->
     <nav class="justify-evenly items-center hidden md:flex">
@@ -54,30 +44,12 @@
       <div>Tags</div>
       <button class=" focus:bg-blue-200">Categories</button>
     </nav>
-
     <div class="hidden md:flex items-center justify-end pr-3 gap-3">
        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>                                                                           
     </div>
-
 </header>
-
-<div class="content">
-  <div class="bg-gray-100">
-    Content
-  </div>
-</div>
-<div class="content">
-  <div class="bg-gray-300">
-    Content
-  </div>
-</div>
-<div class="content">
-  <div class="bg-gray-100">
-    Content
-  </div>
-</div>
 
 <style>
   * {
@@ -123,10 +95,6 @@
     text-align: center;
     padding: 0.75rem 1.5rem;
     background-color: whitesmoke;
-  }
-
-  .content {
-    @apply bg-gray-200 grid h-40 items-center justify-center;
   }
 
   .menu {
