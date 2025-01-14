@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets"
+import hero from "../assets/Hero.jpg"
+
+export interface Props {
+  bgColor?: String,
+  title: String,
+  description: String,
+}
+
+// TODO change the background of the dropdown menu to light.
+// so basically invert the current color scheme -> bg-sand, front-light
+
+const { bgColor, title, description } = Astro.props;
+---
+
+<section class:list={["w-full mt-4 pb-8", bgColor]}>
+  <div class="mt-4 w-full px-6">
+    <div class="aspect-[4/3] w-full pt-6">
+      <Image
+        src={hero}
+        alt="myImage"
+        widths={[240, 540, 720, hero.width]}
+        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${hero.width}px`}
+        quality="low"
+        class="object-cover w-full h-full rounded-3xl shadow-sm"
+      />
+    </div>
+    <!-- TODO only for Desktop i guess -->
+    <div class="flex justify-between items-center px-6 mt-2 hidden">
+      <p class="border border-black rounded-full px-2 py-1">category</p>
+      <span>Date</span>
+    </div>
+    <header class="mt-4 px-2 text-xl poppins-semibold leading-tight">{title}</header>
+    <p class="mt-2 px-2 roboto-text leading-snug">{description}</p>
+  </div>
+</section>
+
+<style>
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .roboto-text {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+</style>
