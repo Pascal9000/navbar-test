@@ -2,7 +2,7 @@
 
 ---
 
-<header class="h-14 relative bg-primary">
+<header class="h-14 sticky top-0 bg-primary">
   <!-- Logo + menu button container -->
   <div id="menu-transformer" class="h-full w-screen pt-3 md:grid md:grid-cols-3" menu-transformer>
     <!-- Expandable container for mobile, only icon + name for desktop -->
@@ -14,9 +14,9 @@
             VitaHub
         </div>
         <!-- hidden checkbox to make everything work -->
-        <input type="checkbox" name="button" id="btn" class="peer hidden">
+        <input type="checkbox" name="button" id="hamburger-checkbox" class="peer hidden">
         <!-- Hamburger menu button-->
-        <label for="btn" tabindex="1" class="flex flex-col justify-end gap-2 cursor-pointer bg-transparent md:hidden" hamburger-menu>
+        <label for="hamburger-checkbox" tabindex="1" class="flex flex-col justify-end gap-2 cursor-pointer bg-transparent md:hidden" hamburger-menu>
           <span class="menu"></span>
           <span class="menu"></span>
           <span class="menu"></span>
@@ -24,9 +24,9 @@
       </div>
       <!-- Menu items for mobile dropdown menu -->
       <nav id="nav" class="opacity-0 h-[50%] flex flex-col items-center tracking-wide" mobile-nav aria-label="main navigation">
-        <label class="button shadow-sm rounded-t-xl" for="btn">Blog</label>
-        <label class="button shadow-sm" for="btn">Tags</label>
-        <label class="button shadow-sm" for="btn">Categories</label>
+        <label class="button shadow-sm rounded-t-xl" for="hamburger-checkbox">Blog</label>
+        <label class="button shadow-sm" for="hamburger-checkbox">Tags</label>
+        <label class="button shadow-sm" for="hamburger-checkbox">Categories</label>
         <div class="button shadow-sm rounded-b-xl mt-2">
           <svg class="m-auto"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
         </div>
